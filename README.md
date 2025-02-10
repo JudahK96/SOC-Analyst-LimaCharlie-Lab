@@ -91,6 +91,7 @@ The scope of this project was to create a home lab of virtual machines. The Kali
 - The ran "whoami" to verify I still had an active system shell.
 
 | Detection| Metadata| Event Timeline|
+|----------------------------|----------------------------|----------------------------|
 |![Screenshot 2025-02-10 142613](https://github.com/user-attachments/assets/bbe22668-d338-4e60-bbce-25f507beb309)|![Screenshot 2025-02-10 142813](https://github.com/user-attachments/assets/cab19567-c866-4216-b718-8cca619c7f50)|![Screenshot 2025-02-10 143201](https://github.com/user-attachments/assets/15a900de-d850-462d-a7fe-b7be41136a2b)|
 
 - The default Sigma rules detect the action.
