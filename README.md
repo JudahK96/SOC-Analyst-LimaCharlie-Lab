@@ -52,8 +52,8 @@ The scope of this project was to create a home lab of virtual machines. The Kali
 |![Screenshot 2025-02-09 215346](https://github.com/user-attachments/assets/46114902-5277-4643-adc5-5e72c342a275)|![Screenshot 2025-02-09 220319](https://github.com/user-attachments/assets/17f9cc92-24e0-4e02-8be1-cf3fe13d9846)|![Screenshot 2025-02-09 221551](https://github.com/user-attachments/assets/1b2db58d-cd5a-45f1-b78f-732d2ecbf15b)|
 
 - Generate my C2 session payload using my Attacking VM's IP (generate --http [Linux_VM_IP] --save /opt/sliver).
-- I confirm the implant config and creat a tempo web server to pull the payload down to the victum machine.
-- I verify the session ID and log the session ID.
+- I confirm the implant config and creat a tempo web server to pull the payload down to the victim machine.
+- I verify the session ID and log the session ID
 
 ## Sliver Session
 ![Screenshot 2025-02-09 221928](https://github.com/user-attachments/assets/e3ee6303-8b53-4b3d-9238-d6345c26a974)
@@ -65,12 +65,12 @@ The scope of this project was to create a home lab of virtual machines. The Kali
 |![Screenshot 2025-02-09 222419](https://github.com/user-attachments/assets/99999140-f7ca-4ac1-a720-1146d76d6a9b)|![Screenshot 2025-02-09 223048](https://github.com/user-attachments/assets/5ba25a3e-65b2-49e5-b128-5189639e7540)|![Screenshot 2025-02-09 223757](https://github.com/user-attachments/assets/5250f12b-6547-4b7b-8909-7d30ba50655e)|
 
 - Checking Processes in LimaCharlie we can see the attackers C2 implant. Selecting the "FAIR_ANALOG.exe" we notice that this process doesn't carry a valid signature as it is not signed. We are also able to identify the destination IP this process is communicating with.
-- We can also serch the IP under Network and see that "FAIR_ANALOG.exe" is returned in the network list.
-- Under File Stystem we can check the location that the implant is running grab the hash.
+- We can also search the IP under Network and see that "FAIR_ANALOG.exe" is returned in the network list.
+- Under File System we can check the location that the implant is running and grab the hash.
 
 ## OSINT
 ![Screenshot 2025-02-09 224112](https://github.com/user-attachments/assets/1de2ba44-d8a5-4eed-8d9d-535d8bbad41e)
 - Inspecting the "FAIR_ANALOG.exe" file hash on Echotrail and VirusTotal comes up with zero results.
-  - This doesn't mean that the file is not malicious. It's just not common/known their query for the hash of the EXE. Since the payload was created by use it's not likely to appear on any OSINT tools.
+  - This does not mean that the file is not malicious. It's just not common/known in their query for the hash of the EXE. Since the payload was created by use it's not likely to appear on any OSINT tools.
 
  
