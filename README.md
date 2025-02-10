@@ -1,4 +1,4 @@
-# SOC Analyst EDR Lab
+# Adversary Emulation and Detection Lab
 
 ## Objective
 The scope of this project was to create a home lab of virtual machines. The Kali-Linux VM as the attacker and the WindowVM as the victim. I used LimaCharlie EDR and Sysmon to work as my threat detection engine as well as track incoming telemetry and for logging. I used Sliver to generate C2 payloads, implant harmful files and operate the host machine in the background.
