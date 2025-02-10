@@ -76,7 +76,10 @@ The scope of this project was to create a home lab of virtual machines. The Kali
 ## Create Detection and Response rule
 | Filter Timeline Event| D&R Rule| Test Event| Detection Alert|
 |----------------------------|----------------------------|----------------------------|----------------------------|
-|![Screenshot 2025-02-09 224334](https://github.com/user-attachments/assets/57571ecf-24c0-4490-a337-bda949b80496)|![Screenshot 2025-02-09 233939](https://github.com/user-attachments/assets/8ee28aff-8a08-4784-995f-a968f22ca0e0)|![Screenshot 2025-02-09 234039](https://github.com/user-attachments/assets/2be6f8c8-df54-43c3-a6dd-fe77eef509db)|![Screenshot 2025-02-09 234648](https://github.com/user-attachments/assets/e4ceecc5-77f7-4096-8bd7-e5820a6b00e4)|
+|![Screenshot 2025-02-09 224334](https://github.com/user-attachments/assets/eab8d6ad-02ab-43fd-bb19-d5640e0f33c6)|![Screenshot 2025-02-09 233939](https://github.com/user-attachments/assets/9cba0600-ff80-4a94-8f6d-9f27853f70fa)|![Screenshot 2025-02-09 234039](https://github.com/user-attachments/assets/48a302e7-a2c1-474a-b712-3262993315f9)|![Screenshot 2025-02-09 234648](https://github.com/user-attachments/assets/8afeef80-0ab1-4a13-9922-2ed93db557f6)|
 
-
+- Ran the command "procdump -n lsass.exe -s lsass.dmp" since "lsass.exe" would generate events for the EDR.
+- I filtered out the timeline for "FAIR_ANALOG" and found the specific event I wanted to create a D&R for.
+- When it detects SENSITIVE_PROCESS_ACCESS that matches the Target Event it will generate a detection report.
+- I reran the "procdump -n lsass.exe -s lsass.dmp" and now we can see tha alert in the Detection tab of LimaCharlie.
 
