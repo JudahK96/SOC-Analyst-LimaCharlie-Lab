@@ -70,4 +70,7 @@ The scope of this project was to create a home lab of virtual machines. The Kali
 
 ## OSINT
 ![Screenshot 2025-02-09 224112](https://github.com/user-attachments/assets/1de2ba44-d8a5-4eed-8d9d-535d8bbad41e)
+- Inspecting the "FAIR_ANALOG.exe" file hash on Echotrail and VirusTotal comes up with zero results.
+  - This doesn't mean that the file is not malicious. It's just not common/known their query for the hash of the EXE. Since the payload was created by use it's not likely to appear on any OSINT tools.
 
+ 
