@@ -51,6 +51,14 @@ The scope of this project was to create a home lab of virtual machines. The Kali
 |----------------------------|----------------------------|----------------------------|
 |![Screenshot 2025-02-09 215346](https://github.com/user-attachments/assets/46114902-5277-4643-adc5-5e72c342a275)|![Screenshot 2025-02-09 220319](https://github.com/user-attachments/assets/17f9cc92-24e0-4e02-8be1-cf3fe13d9846)|![Screenshot 2025-02-09 221551](https://github.com/user-attachments/assets/1b2db58d-cd5a-45f1-b78f-732d2ecbf15b)|
 
--
+- Generate my C2 session payload using my Attacking VM's IP (generate --http [Linux_VM_IP] --save /opt/sliver)
+- I confirm the implant config and creat a tempo web server to pull the payload down to the victum machine.
+- I verify the session ID and log the session ID.
 
+## Sliver Session
+![Screenshot 2025-02-09 221928](https://github.com/user-attachments/assets/e3ee6303-8b53-4b3d-9238-d6345c26a974)
+- Grab basic info about the session abd that privileges my implant has (info, whoami, getprevis)
 
+## Observing EDR Telemetry
+| Create C2 playload| Implant file transfer| Verify active implant session|
+|----------------------------|----------------------------|----------------------------|
