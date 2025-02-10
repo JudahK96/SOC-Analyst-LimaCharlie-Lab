@@ -43,3 +43,14 @@ The scope of this project was to create a home lab of virtual machines. The Kali
 - Configured Lima Charlie to ship the Sysmon event log alongside its own EDR telemetry
 
 ## Setting up Attack VM
+![Screenshot 2025-02-09 212656](https://github.com/user-attachments/assets/74e6fcb5-6809-48ea-ab80-ada9db5377b1)
+- Installed Sliver and created a workign directory
+
+## Attack setup against Windows VM
+| Create C2 playload| Implant file transfer| Verify active implant session|
+|----------------------------|----------------------------|----------------------------|
+|![Screenshot 2025-02-09 215346](https://github.com/user-attachments/assets/46114902-5277-4643-adc5-5e72c342a275)|![Screenshot 2025-02-09 220319](https://github.com/user-attachments/assets/17f9cc92-24e0-4e02-8be1-cf3fe13d9846)|![Screenshot 2025-02-09 221551](https://github.com/user-attachments/assets/1b2db58d-cd5a-45f1-b78f-732d2ecbf15b)|
+
+-
+
+
