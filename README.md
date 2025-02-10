@@ -28,9 +28,9 @@ The scope of this project was to create a home lab of virtual machines. The Kali
 
 <br/>
 
-- Disable Tamper Protection/ All Virus & threat protection settings
-- Permanently Disable Defender via Group Policy Editor (Computer Configuration > Administrative Templates > Windows Components > Microsoft Defender Antivirus)
-- Safeboot then disabled services in the Registry (Services\Sense,WdBoot,WinDefend,WdNisDrv,WdNisSvc,WdFilter)
+- Disable Tamper Protection/ All Virus & threat protection settings.
+- Permanently Disable Defender via Group Policy Editor (Computer Configuration > Administrative Templates > Windows Components > Microsoft Defender Antivirus).
+- Safeboot then disabled services in the Registry (Services\Sense,WdBoot,WinDefend,WdNisDrv,WdNisSvc,WdFilter).
   
 <br/>
 
@@ -39,8 +39,8 @@ The scope of this project was to create a home lab of virtual machines. The Kali
 |----------------------------|----------------------------|----------------------------|
 |![Screenshot 2025-02-09 192458](https://github.com/user-attachments/assets/178f0b7e-e9bf-4274-b2c6-b6baef234a32)|![Screenshot 2025-02-09 201938](https://github.com/user-attachments/assets/07459ea8-46c0-48a1-b455-b8034452843e)|![Screenshot 2025-02-09 202231](https://github.com/user-attachments/assets/3be69ab2-dd0f-42f1-b0b2-88b7e033aacb)|
 
-- Created a LimaCharlie organization and added a sensor for Windows
-- Configured Lima Charlie to ship the Sysmon event log alongside its own EDR telemetry
+- Created a LimaCharlie organization and added a sensor for Windows.
+- Configured Lima Charlie to ship the Sysmon event log alongside its own EDR telemetry.
 
 ## Setting up Attack VM
 ![Screenshot 2025-02-09 212656](https://github.com/user-attachments/assets/74e6fcb5-6809-48ea-ab80-ada9db5377b1)
@@ -51,7 +51,7 @@ The scope of this project was to create a home lab of virtual machines. The Kali
 |----------------------------|----------------------------|----------------------------|
 |![Screenshot 2025-02-09 215346](https://github.com/user-attachments/assets/46114902-5277-4643-adc5-5e72c342a275)|![Screenshot 2025-02-09 220319](https://github.com/user-attachments/assets/17f9cc92-24e0-4e02-8be1-cf3fe13d9846)|![Screenshot 2025-02-09 221551](https://github.com/user-attachments/assets/1b2db58d-cd5a-45f1-b78f-732d2ecbf15b)|
 
-- Generate my C2 session payload using my Attacking VM's IP (generate --http [Linux_VM_IP] --save /opt/sliver)
+- Generate my C2 session payload using my Attacking VM's IP (generate --http [Linux_VM_IP] --save /opt/sliver).
 - I confirm the implant config and creat a tempo web server to pull the payload down to the victum machine.
 - I verify the session ID and log the session ID.
 
@@ -60,5 +60,14 @@ The scope of this project was to create a home lab of virtual machines. The Kali
 - Grab basic info about the session abd that privileges my implant has (info, whoami, getprevis)
 
 ## Observing EDR Telemetry
-| Create C2 playload| Implant file transfer| Verify active implant session|
+| Processes| Network| File System|
 |----------------------------|----------------------------|----------------------------|
+|![Screenshot 2025-02-09 222419](https://github.com/user-attachments/assets/99999140-f7ca-4ac1-a720-1146d76d6a9b)|![Screenshot 2025-02-09 223048](https://github.com/user-attachments/assets/5ba25a3e-65b2-49e5-b128-5189639e7540)|![Screenshot 2025-02-09 223757](https://github.com/user-attachments/assets/5250f12b-6547-4b7b-8909-7d30ba50655e)|
+
+- Checking Processes in LimaCharlie we can see the attackers C2 implant. Selecting the "FAIR_ANALOG.exe" we notice that this process doesn't carry a valid signature as it is not signed. We are also able to identify the destination IP this process is communicating with.
+- We can also serch the IP under Network and see that "FAIR_ANALOG.exe" is returned in the network list.
+- Under File Stystem we can check the location that the implant is running grab the hash.
+
+## OSINT
+![Screenshot 2025-02-09 224112](https://github.com/user-attachments/assets/1de2ba44-d8a5-4eed-8d9d-535d8bbad41e)
+
