@@ -83,3 +83,16 @@ The scope of this project was to create a home lab of virtual machines. The Kali
 - When it detects SENSITIVE_PROCESS_ACCESS that matches the Target Event it will generate a detection report.
 - I reran the "procdump -n lsass.exe -s lsass.dmp" and now we can see tha alert in the Detection tab of LimaCharlie.
 
+## Block attacks with D&R
+![Screenshot 2025-02-10 142440](https://github.com/user-attachments/assets/37d1eeae-f430-4aa3-abda-caf4f8cf1c0f)
+
+- Uses Silver C2 enter the victims shell
+- Run "vssadmin delete shadows /all" command which can stimulate a typical ransomware attack pattern.
+- The ran "whoami" to verify I still had an active system shell.
+
+| Detection| Metadata| Event Timeline|
+|![Screenshot 2025-02-10 142613](https://github.com/user-attachments/assets/bbe22668-d338-4e60-bbce-25f507beb309)|![Screenshot 2025-02-10 142813](https://github.com/user-attachments/assets/cab19567-c866-4216-b718-8cca619c7f50)|![Screenshot 2025-02-10 143201](https://github.com/user-attachments/assets/15a900de-d850-462d-a7fe-b7be41136a2b)|
+
+- The default Sigma rules detect the action.
+- When inspecting the alert the Sigma rules contain references  to understand the detection and why it exists.
+- Inspected the alert on the timeline and created D&R based on the event.
