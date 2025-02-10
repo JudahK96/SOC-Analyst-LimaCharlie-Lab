@@ -97,3 +97,10 @@ The scope of this project was to create a home lab of virtual machines. The Kali
 - The default Sigma rules detect the action.
 - When inspecting the alert the Sigma rules contain references  to understand the detection and why it exists.
 - Inspected the alert on the timeline and created D&R based on the event.
+
+| Base D&R| Modified Rule| Proccess Killed|
+|----------------------------|----------------------------|----------------------------|
+|![Screenshot 2025-02-10 143548](https://github.com/user-attachments/assets/9d1eedd0-1b99-4dff-90bb-0832921b974b)|![Screenshot 2025-02-10 144827](https://github.com/user-attachments/assets/2838be96-9ba1-4afe-9a30-a910d7bfb94d)|![Screenshot 2025-02-10 144101](https://github.com/user-attachments/assets/63fc300d-c283-4430-9bd2-b36a668fc861)|
+
+-
+
