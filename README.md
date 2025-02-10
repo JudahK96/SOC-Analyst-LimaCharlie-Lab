@@ -28,9 +28,9 @@ The scope of this project was to create a home lab of virtual machines. The Kali
 
 <br/>
 
-Disable Tamper Protection/ All Virus & threat protection settings
-Permanently Disable Defender via Group Policy Editor (Computer Configuration > Administrative Templates > Windows Components > Microsoft Defender Antivirus)
-Safeboot then disabled services in the Registry (Services\Sense,WdBoot,WinDefend,WdNisDrv,WdNisSvc,WdFilter)
+- Disable Tamper Protection/ All Virus & threat protection settings
+- Permanently Disable Defender via Group Policy Editor (Computer Configuration > Administrative Templates > Windows Components > Microsoft Defender Antivirus)
+- Safeboot then disabled services in the Registry (Services\Sense,WdBoot,WinDefend,WdNisDrv,WdNisSvc,WdFilter)
   
 <br/>
 
