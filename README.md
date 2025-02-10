@@ -102,5 +102,8 @@ The scope of this project was to create a home lab of virtual machines. The Kali
 |----------------------------|----------------------------|----------------------------|
 |![Screenshot 2025-02-10 143548](https://github.com/user-attachments/assets/9d1eedd0-1b99-4dff-90bb-0832921b974b)|![Screenshot 2025-02-10 144827](https://github.com/user-attachments/assets/2838be96-9ba1-4afe-9a30-a910d7bfb94d)|![Screenshot 2025-02-10 144101](https://github.com/user-attachments/assets/63fc300d-c283-4430-9bd2-b36a668fc861)|
 
--
-
+- From the D&R template, I can craft a response that will happen when this activity is observed.
+  - action: report - simply fires off a Detection report to the Detections tab.
+  - action: task - is responsible for killing the parent process responsible with deny_tree for the vssadmin delete shadows /all command.
+- Edited rule to have a better way of matching on the cmd line instead of matching the string of vssadmin delete shadows /all.
+- Reran the "vssadmin delete shadows /all" and 'whoami' command and we can see the shell closed without giving the information prior.
