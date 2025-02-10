@@ -35,4 +35,7 @@ The scope of this project was to create a home lab of virtual machines. The Kali
 <br/>
 
 ## Installing Sysmon in Windows VM
-![Screenshot 2025-02-09 192458](https://github.com/user-attachments/assets/178f0b7e-e9bf-4274-b2c6-b6baef234a32)
+| Sysmon Install| LimaCharlie Install| LimaCharlie/Sysmon Event Log config|
+|----------------------------|----------------------------|----------------------------|
+|![Screenshot 2025-02-09 192458](https://github.com/user-attachments/assets/178f0b7e-e9bf-4274-b2c6-b6baef234a32)|![Screenshot 2025-02-09 201938](https://github.com/user-attachments/assets/8cfb1333-5a2d-49c7-a008-ece6e5285805)|![Screenshot 2025-02-09 202231](https://github.com/user-attachments/assets/3be69ab2-dd0f-42f1-b0b2-88b7e033aacb)|
+
