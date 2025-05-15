@@ -57,7 +57,7 @@ The scope of this project was to create a home lab of virtual machines. The Kali
 
 ## Sliver Session
 ![Screenshot 2025-02-09 221928](https://github.com/user-attachments/assets/e3ee6303-8b53-4b3d-9238-d6345c26a974)
-- Grab basic info about the session abd that privileges my implant has (info, whoami, getprevis)
+- Grab basic info about the session and that privilege implant has (info, whoami, getprevis)
 
 ## Observing EDR Telemetry
 | Processes| Network| File System|
