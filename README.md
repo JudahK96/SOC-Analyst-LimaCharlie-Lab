@@ -88,7 +88,7 @@ The scope of this project was to create a home lab of virtual machines. The Kali
 
 - Uses Silver C2 enter the victims shell
 - Run "vssadmin delete shadows /all" command which can stimulate a typical ransomware attack pattern.
-- The ran "whoami" to verify I still had an active system shell.
+- Then ran "whoami" to verify I still had an active system shell.
 
 | Detection| Metadata| Event Timeline|
 |----------------------------|----------------------------|----------------------------|
